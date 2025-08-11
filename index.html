@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>andrewcod3s - Minecraft development portfolio</title>
+  <meta name="description" content="Portfolio showcasing GitHub repositories by andrewcod3s — Minecraft development projects." />
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="andrewcod3s - Minecraft development portfolio" />
+  <meta name="twitter:description" content="Portfolio showcasing GitHub repositories by andrewcod3s — Minecraft development projects." />
+  <meta name="twitter:image" content="https://github.com/andrewcod3s.png" />
+  
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="andrewcod3s - Minecraft development portfolio" />
+  <meta property="og:description" content="Portfolio showcasing GitHub repositories by andrewcod3s — Minecraft development projects." />
+  <meta property="og:url" content="https://andrewcod3s.github.io" />
+  <meta property="og:image" content="https://github.com/andrewcod3s.png" />
+  <meta property="og:site_name" content="andrewcod3s Portfolio" />
+  
+  <style>
+    @keyframes typewriter {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+    
+    .typewriter {
+      overflow: hidden;
+      border-right: 3px solid var(--accent);
+      white-space: nowrap;
+      animation: typewriter 2s steps(30, end), blink 0.75s step-end infinite;
+    }
+  </style>
+  <link rel="icon" type="image/x-icon" href="" id="favicon">
+  <style>
+    :root{
+      --bg:#000000; --card:#0a0a0a; --muted:#ffffff; --accent:#6ee7b7; --accent-2:#22c55e;
+      --glass: rgba(255,255,255,0.05); --glass-2: rgba(255,255,255,0.03);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:#000;color:#ffffff;min-height:100vh; -webkit-font-smoothing:antialiased}
+
+    .wrap{max-width:1100px;margin:28px auto;padding:20px}
+
+header{display:flex;gap:16px;align-items:center}
+#avatar{transform: translateY(-120px);} 
+    .avatar{width:84px;height:84px;border-radius:14px;overflow:hidden;background:var(--card);flex:0 0 84px;box-shadow:0 6px 18px rgba(0,0,0,0.6);transition:all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);cursor:pointer;position:relative}
+    .avatar:hover{transform:scale(1.1) rotate(5deg);box-shadow:0 0 30px rgba(0,255,0,0.6),0 0 60px rgba(0,255,0,0.3),0 8px 25px rgba(0,0,0,0.4);filter:brightness(1.2) saturate(1.3)}
+    .avatar:active{transform:scale(0.95) rotate(-2deg)}
+    .avatar::after{content:'';position:absolute;top:-2px;left:-2px;right:-2px;bottom:-2px;background:linear-gradient(45deg,#00ff00,#00ccff,#ff00ff,#00ff00);background-size:400% 400%;border-radius:16px;opacity:0;transition:opacity 0.3s;z-index:-1}
+    .avatar:hover::after{opacity:1;animation:avatarGlow 2s ease-in-out infinite}
+    @keyframes avatarGlow{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    h1{margin:0;font-size:20px}
+    #title{display:block}
+    p.lead{margin:4px 0 0;color:var(--muted);font-size:13px}
+
+    .top-actions{margin-left:8px;display:flex;gap:8px;align-items:center;margin-top:8px}
+    .link-btn{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));color:inherit;text-decoration:none;font-weight:600;font-size:13px;transition:all 0.3s cubic-bezier(0.4, 0, 0.2, 1);position:relative;overflow:hidden}
+    .link-btn:hover{transform:translateY(-2px) scale(1.05);border-color:rgba(255,255,255,0.2);box-shadow:0 8px 25px rgba(0,0,0,0.3),0 0 20px rgba(110,231,183,0.2)}
+    .link-btn:active{transform:translateY(0) scale(0.98)}
+    .link-btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.1),transparent);transition:left 0.5s}
+    .link-btn:hover::before{left:100%}
+    .link-btn svg{transition:transform 0.3s ease}
+    .link-btn:hover svg{transform:rotate(360deg) scale(1.1)}
+    
+    #discord-btn:hover{background:linear-gradient(135deg,#5865f2,#7289da);border-color:#5865f2;box-shadow:0 8px 25px rgba(88,101,242,0.4),0 0 30px rgba(88,101,242,0.3)}
+    #discord-btn:hover svg{filter:drop-shadow(0 0 8px rgba(255,255,255,0.5))}
+    
+    #github-btn:hover{background:linear-gradient(135deg,#333,#666);border-color:#333;box-shadow:0 8px 25px rgba(0,0,0,0.4),0 0 30px rgba(255,255,255,0.1)}
+    
+    .btn{transition:all 0.3s cubic-bezier(0.4, 0, 0.2, 1);position:relative;overflow:hidden}
+    .btn:hover{transform:translateY(-2px) scale(1.05);box-shadow:0 8px 25px rgba(0,0,0,0.3)}
+    .btn:active{transform:translateY(0) scale(0.98)}
+    .btn.primary:hover{background:linear-gradient(135deg,var(--accent),#4ade80);box-shadow:0 8px 25px rgba(110,231,183,0.4),0 0 30px rgba(110,231,183,0.3)}
+    .btn.ghost:hover{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.3)}
+    .btn.link:hover{color:#4ade80;text-shadow:0 0 8px rgba(110,231,183,0.5)}
+
+    .controls{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;background:var(--glass);padding:12px;border-radius:12px;align-items:center}
+    .search{display:flex;align-items:center;gap:8px;background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 10px;border-radius:10px;min-width:260px}
+    .search input{background:transparent;border:0;color:inherit;outline:none;width:100%}
+    .controls select{background:transparent;border:1px solid rgba(255,255,255,0.06);color:inherit;padding:8px 10px;border-radius:8px}
+    .controls .right{margin-left:auto;color:var(--muted);font-size:13px;align-self:center}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:18px}
+    .card{background:#000;padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.22);box-shadow:0 6px 18px rgba(0,0,0,0.8);display:flex;flex-direction:column;justify-content:space-between;transition:transform .18s ease, box-shadow .18s ease}
+    .card:hover{transform:translateY(-6px);box-shadow:0 18px 34px rgba(255,255,255,0.1)}
+    .card h3{margin:0;font-size:16px}
+    .desc{margin:8px 0 0;color:#ffffff;font-size:13px;min-height:36px}
+    .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;color:#ffffff;font-size:12px}
+    .meta .pill{background:transparent;border:1px solid rgba(255,255,255,0.35);padding:6px 10px;border-radius:999px;font-weight:600;color:#ffffff}
+
+    .card .actions{display:flex;gap:8px;justify-content:space-between;align-items:center;margin-top:14px}
+    .actions .left{display:flex;gap:8px;align-items:center}
+    .btn{border:1px solid rgba(255,255,255,0.35);padding:8px 12px;border-radius:10px;background:#000;color:#ffffff;cursor:pointer;font-weight:700}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.35)}
+    .btn.link{background:transparent;border:0;color:var(--accent);padding:6px 8px}
+
+    .muted{color:#ffffff;font-size:13px}
+
+    footer{display:none}
+
+    /* small toast */
+    .toast{position:fixed;right:18px;bottom:18px;background:rgba(0,0,0,0.6);padding:10px 14px;border-radius:10px;color:#e6eef6;font-weight:700;border:1px solid rgba(255,255,255,0.03);opacity:0;transform:translateY(8px);transition:opacity .22s ease,transform .22s ease}
+    .toast.show{opacity:1;transform:translateY(0)}
+
+    @media (max-width:520px){.controls input,.controls select{min-width:140px}.search{min-width:160px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="avatar" id="avatar"></div>
+      <div style="flex:1">
+        <div style="display:flex;align-items:flex-start;gap:12px;justify-content:space-between;">
+          <div>
+            <h1 id="title">andrewcod3s</h1>
+            <p class="lead">Minecraft development portfolio - msg me for a plugin <span id="bio"></span></p>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center">
+            <a id="github-btn" class="link-btn" href="#" target="_blank" rel="noreferrer">
+              <svg width="24px" height="24px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38C13.71 14.53 16 11.54 16 8c0-4.42-3.58-8-8-8z"/></svg>
+              GitHub
+            </a>
+
+            <a id="discord-btn" class="link-btn" href="#" target="_blank" rel="noreferrer">
+              <svg width="24px" height="24px" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg" fill="#ffffff"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+              Discord
+            </a>
+          </div>
+        </div>
+
+
+    <div class="controls" role="region" aria-label="controls">
+      <label class="search" for="search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><input id="search" placeholder="Search repos by name or description" /></label>
+
+      <select id="langFilter"><option>All languages</option></select>
+      <select id="sortBy"><option value="updated">Recently updated</option><option value="stars">Most stars</option><option value="name">Name</option></select>
+
+      <div class="right" id="status">Loading repos…</div>
+    </div>
+
+    <main>
+      <div class="grid" id="repoGrid"></div>
+    </main>
+
+    <footer>
+      Built by <strong>andrewcod3s</strong> 
+    </footer>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    const GITHUB_USER = 'andrewcod3s';
+    const DISCORD_URL = 'https://discordapp.com/users/1160331505416011856';
+
+    const avatarEl = document.getElementById('avatar');
+    const titleEl = document.getElementById('title');
+    const bioEl = document.getElementById('bio');
+    const statusEl = document.getElementById('status');
+    const grid = document.getElementById('repoGrid');
+    const searchInput = document.getElementById('search');
+    const langFilter = document.getElementById('langFilter');
+    const sortBy = document.getElementById('sortBy');
+    const toast = document.getElementById('toast');
+
+    const githubBtn = document.getElementById('github-btn');
+    const discordBtn = document.getElementById('discord-btn');
+
+    let repos = [];
+
+    function showToast(msg){
+      toast.textContent = msg; toast.classList.add('show');
+      clearTimeout(toast._t);
+      toast._t = setTimeout(()=> toast.classList.remove('show'), 2200);
+    }
+
+    async function fetchGitHub(){
+      statusEl.textContent = 'Fetching GitHub profile...';
+      try{
+        const [userRes, reposRes] = await Promise.all([
+          fetch(`https://api.github.com/users/${GITHUB_USER}`),
+          fetch(`https://api.github.com/users/${GITHUB_USER}/repos?per_page=100&sort=updated`)
+        ]);
+        if(!userRes.ok) throw new Error('Failed to fetch user');
+        if(!reposRes.ok) throw new Error('Failed to fetch repos');
+        const user = await userRes.json();
+        repos = await reposRes.json();
+        if (Array.isArray(repos)) {
+          repos = repos.filter(r => (r.name || '').toLowerCase() !== (GITHUB_USER || '').toLowerCase());
+        }
+
+        const titleText = user.login ? `${user.login} - Minecraft development portfolio` : `${GITHUB_USER} - Minecraft development portfolio`;
+        typeWriter(titleEl, titleText, 100);
+        
+        bioEl.textContent = user.bio ? `— ${user.bio}` : '';
+        githubBtn.href = user.html_url || `https://github.com/${GITHUB_USER}`;
+        discordBtn.href = DISCORD_URL;
+
+        if(user.avatar_url){
+          avatarEl.innerHTML = `<img src="${user.avatar_url}" alt="${user.login} avatar">`;
+        } else {
+          avatarEl.textContent = user.name ? user.name[0] : 'A';
+          avatarEl.style.display = 'flex';
+          avatarEl.style.alignItems = 'center';
+          avatarEl.style.justifyContent = 'center';
+          avatarEl.style.fontSize = '28px';
+        }
+
+        populateLangFilter();
+        render();
+        statusEl.textContent = `Showing ${repos.length} repos`;
+
+      } catch(err){
+        console.error(err);
+        statusEl.textContent = 'Error loading GitHub data';
+        grid.innerHTML = `<div style="grid-column:1/-1;color:#f88;padding:20px;border-radius:10px;background:rgba(255,0,0,0.03)">Unable to load repositories. Check console for details.</div>`;
+      }
+    }
+    function typeWriter(element, text, speed) {
+      let i = 0;
+      element.textContent = '';
+      element.classList.add('typewriter');
+      
+      function type() {
+        if (i < text.length) {
+          element.textContent += text.charAt(i);
+          i++;
+          setTimeout(type, speed);
+        } else {
+          setTimeout(() => {
+            element.classList.remove('typewriter');
+          }, 1000);
+        }
+      }
+      type();
+    }
+
+    function typeWriterTitle(text, speed) {
+      let i = 0;
+      document.title = '';
+      
+      function typeTitle() {
+        if (i < text.length) {
+          document.title += text.charAt(i);
+          i++;
+          setTimeout(typeTitle, speed);
+        }
+      }
+      typeTitle();
+    }
+
+    const documentTitle = 'andrewcod3s - Minecraft development portfolio';
+    typeWriterTitle(documentTitle, 150);
+
+    function populateLangFilter(){
+      const set = new Set();
+      repos.forEach(r => { if(r.language) set.add(r.language); });
+      langFilter.innerHTML = '<option>All languages</option>' + [...set].sort().map(l => `<option>${l}</option>`).join('');
+    }
+
+    function filteredRepos(){
+      const q = searchInput.value.trim().toLowerCase();
+      const lang = langFilter.value;
+      let out = repos.slice();
+      if(lang !== 'All languages') out = out.filter(r => r.language === lang);
+      if(q) out = out.filter(r => (r.name && r.name.toLowerCase().includes(q)) || (r.description && r.description.toLowerCase().includes(q)));
+      const s = sortBy.value;
+      if(s === 'stars') out.sort((a,b)=>b.stargazers_count - a.stargazers_count);
+      else if(s === 'name') out.sort((a,b)=>a.name.localeCompare(b.name));
+      else out.sort((a,b)=> new Date(b.updated_at) - new Date(a.updated_at));
+      return out;
+    }
+
+    function render(){
+      const list = filteredRepos();
+      if(list.length === 0){
+        grid.innerHTML = '<div style="grid-column:1/-1;color:var(--muted);padding:20px">No repositories match your filters.</div>';
+        return;
+      }
+      grid.innerHTML = list.map(r => {
+        const langBadge = r.language ? `<span class="pill">${escapeHtml(r.language)}</span>` : '';
+        const desc = r.description ? `<div class="desc">${escapeHtml(r.description)}</div>` : '';
+        return `
+        <article class="card">
+          <div>
+            <h3><a href="${r.html_url}" target="_blank" rel="noreferrer" style="color:inherit;text-decoration:none">${escapeHtml(r.name)}</a></h3>
+            ${desc}
+            <div class="meta">
+              ${langBadge}
+              <span class="pill">⭐ ${r.stargazers_count}</span>
+              <span class="pill">Forks: ${r.forks_count}</span>
+              <span class="pill">Updated: ${new Date(r.updated_at).toLocaleDateString()}</span>
+            </div>
+          </div>
+
+          <div class="actions">
+            <div class="left">
+              <a class="btn primary" href="${r.homepage ? (r.homepage.startsWith('http') ? r.homepage : 'https://'+r.homepage) : r.html_url}" target="_blank" rel="noreferrer">Open</a>
+              <a class="btn ghost" href="${r.html_url}" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+            <div>
+              <button class="btn link" onclick="copyText('${r.clone_url.replace(/'/g, "\'")}')" title="Copy clone URL">Copy</button>
+            </div>
+          </div>
+        </article>
+      `}).join('');
+    }
+
+    function copyText(text){
+      if(navigator.clipboard) navigator.clipboard.writeText(text).then(()=>{ statusEl.textContent='Clone URL copied'; showToast('Clone URL copied'); }).catch(()=>{ statusEl.textContent='Unable to copy'; showToast('Unable to copy'); });
+    }
+
+    function escapeHtml(s){ if(!s) return ''; return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+    [searchInput,langFilter,sortBy].forEach(el => el.addEventListener('input', () => { render(); statusEl.textContent = `Showing ${filteredRepos().length} of ${repos.length} repos`; }));
+
+    fetchGitHub();
+  </script>
+</body>
+</html>
