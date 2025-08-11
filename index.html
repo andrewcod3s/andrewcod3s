@@ -486,7 +486,7 @@
         const titleText = user.login ? `${user.login} Portfolio` : `${GITHUB_USER} - Portfolio`;
         document.title = titleText;
 
-        bioEl.textContent = user.bio || 'Minecraft plugin developer. I build tools and plugins for servers, focusing on performance and good DX.';
+        bioEl.textContent = user.bio || 'Minecraft plugin developer. I build tools and plugins for servers in Minecraft.';
 
         githubBtn.href = user.html_url || `https://github.com/${GITHUB_USER}`;
         discordBtn.href = DISCORD_URL;
